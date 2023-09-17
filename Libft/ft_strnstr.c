@@ -22,7 +22,7 @@
     comp = 0;
     i = 0;
     b = 0;
-    while (big++ && i++ < len)
+    while (big++ && i++ <= len)
     {
         if (*big == little[b])
         {

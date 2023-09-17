@@ -24,7 +24,7 @@ int ft_strcmp(const char *s1, const char *s2)
     }
     return (0);
 }
-
+/*
 int main (void)
 {
     char test1[20] = "patato";
@@ -33,3 +33,4 @@ int main (void)
     printf("salida original :%d \n",strcmp(test1,test2));
     printf("salida     mia  :%d \n",ft_strcmp(test1,test2));
 }
+*/

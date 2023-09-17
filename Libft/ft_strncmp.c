@@ -21,8 +21,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
     i = 1;
     while ((*s1 || *s2) &&  i <= n )
     {
-        if (*s1 != *s2)
-            return (*s1 - *s2);
+        if ((unsigned char)*s1 != (unsigned char)*s2)
+            return ((unsigned char)*s1 - (unsigned char)*s2);
         s1++;
         s2++;
         i++;
@@ -31,13 +31,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 }
 
-
+/*
 int main (void)
 {
-    char test1[20] = "patato";
-    char test2[20] = "patata";
-    int comp = 10;
+    char test1[20] = "test\200";
+    char test2[20] = "test\0";
+    int comp = 6;
 
     printf("salida original :%d \n",strncmp(test1,test2,comp));
     printf("salida     mia  :%d \n",ft_strncmp(test1,test2,comp));
 }
+*/

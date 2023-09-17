@@ -15,36 +15,35 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-    char    *mid;
-    char    *exit;
-    int     esta;
-
-    esta = 0;
+    char *mid;
+    int i;
+    i = 0;
     mid = (char*)s;
-    if (s[0] == '\0')
-        return (mid);
-    while (*mid++ != '\0')
+
+    while (*mid != '\0')
+    {
+        i++;
+        mid++;
+    }
+    if (c == '\0')
+        return(mid);
+    while (i >= 0)
     {
         if (*mid == c)
-        {
-            exit = mid;
-            esta = 1;
-        }
-        
+            return (mid);
+        i--;
+        mid--;
     }
-    if (esta)
-        return (exit);
-    else
-        return (NULL);
+    return (NULL);
 }
 /*
 int main (void)
 {
-    char test[8] = "potatoe";
-    int busc = '\0';
+    char test[12] = "abbbbbbbb";
+    int busc = 'a';
 
     printf("la salida original de %s es :%s\n",test,strrchr(test,busc));
-    printf("la salida  de %s es :%s",test,ft_strrchr(test,busc));
+    printf("la salida  de %s es :%s\n",test,ft_strrchr(test,busc));
     printf("\nla varible original es:%s",test);
 }
 */

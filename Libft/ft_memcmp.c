@@ -30,10 +30,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
         si2++;
     }
     return(0);
-
-
 }
-
+/*
 int main (void)
 {
     char test1[7] = "patato";
@@ -43,3 +41,4 @@ int main (void)
     printf("la salida original es: %d\n",memcmp(test1,test2,cont));
     printf("la salida  mia     es: %d\n",ft_memcmp(test1,test2,cont));
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 18:25:09 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/16 18:25:13 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/18 15:47:22 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@
     }
     return(NULL);
  }
-
+/*
 int main (void)
 {
     char test1[22] = "hola ladilla ladradora";
@@ -55,3 +55,4 @@ int main (void)
     printf("la original retorna :%s\n",strnstr(test1,test2,cont));
     printf("la original retorna :%s\n",ft_strnstr(test1,test2,cont));
 }
+*/

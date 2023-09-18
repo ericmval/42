@@ -6,7 +6,7 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 23:40:25 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/14 20:21:28 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/18 18:26:48 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -27,7 +27,6 @@ char *ft_strnstr(const char *big,	const char *little, size_t len);
 char *ft_strrchr(const char *s, int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
-
-/*int ft_isalnum(int c);*/
-
+size_t ft_strlen(const char *s);
+void ft_bzero(void *s, size_t n);
 #endif

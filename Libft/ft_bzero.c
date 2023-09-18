@@ -1,22 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 23:31:55 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/14 14:45:37 by emartin2         ###   ########.fr       */
+/*   Created: 2023/09/18 18:11:18 by emartin2          #+#    #+#             */
+/*   Updated: 2023/09/18 19:29:47 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-#include "libft.h"
 
-int main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	char a = 'a';
-	printf("el return de %c es: %d\n",a, ft_isalpha(a));
+	size_t	i;
+	char	*mid;
 
+	i = 0;
+	mid = (char *)s;
+	while (i < n -1)
+	{
+		mid[i] = '\0';
+		i++;
+	}
+	s = (void *)mid;
+}
+/*
+int main (void)
+{
+	char test[19] = "canalla";
+	int i = 0;
+	ft_bzero(test,5);
+	while (i < 15)
+	{
+		printf("%c\n",test[i]);
+		printf("%p\n", test);
+		i++;
+	}
 	return (0);
 }
+*/

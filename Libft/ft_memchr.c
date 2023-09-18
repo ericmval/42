@@ -18,7 +18,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	char	*med;
 
 	i = 1;
-	if (c >= 265)
+	if (c > 265)
 		c = c % 265;
 	med = (char *) str;
 	while (i <= n)
@@ -35,20 +35,19 @@ void	*ft_memchr(const void *str, int c, size_t n)
 int main (void)
 {
     char    test1[14] = "paralelogramo";
-   int     test2[5] = {32,111,500,1600,3};
+   int     test2[7] = {0,1,2,3,4,5};
  //   char    busc = 't';
-    int     busc2 = 32;
+ //   int     busc2 = 32;
 
     int     n = 3;
 
-    printf("la original  da: %s\n",memchr(test1,2 ,n));
-    printf("la original  da: %p\n",memchr(&test2,busc2,n));
+    printf("la original  da: %p\n",memchr(test1,2 + 256 ,n));
+    printf("la original  da: %p\n",memchr(&test2,2 + 256,n));
       printf("test1 ahora es :%s\n",test1);
 
-    printf("la   mia     da: %s\n",ft_memchr(test1,2 + 256,n));
-    printf("la   mia    da: %p\n",ft_memchr(&test2,busc2,n));
+    printf("la   mia     da: %p\n",ft_memchr(test1,2 + 256,n));
+    printf("la   mia    da: %p\n",ft_memchr(&test2,2+256,n));
     printf("test2 ahora es :%s\n",test1);
 
 }
 */
-

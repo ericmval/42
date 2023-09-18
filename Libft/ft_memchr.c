@@ -18,8 +18,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	char	*med;
 
 	i = 1;
-	if (c > 265)
-		c = c % 265;
+	if (c > 256)
+		c = c % 256;
 	med = (char *) str;
 	while (i <= n)
 	{

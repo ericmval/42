@@ -19,6 +19,8 @@ char *ft_strrchr(const char *s, int c)
     int i;
     i = 0;
     mid = (char*)s;
+    if (c > 256)
+        c %= 256;
 
     while (*mid != '\0')
     {
@@ -36,14 +38,13 @@ char *ft_strrchr(const char *s, int c)
     }
     return (NULL);
 }
-/*
+
 int main (void)
 {
-    char test[12] = "abbbbbbbb";
-    int busc = 'a';
+    char test[12] = "tripouille";
+    int busc = 't' + 256;
 
     printf("la salida original de %s es :%s\n",test,strrchr(test,busc));
     printf("la salida  de %s es :%s\n",test,ft_strrchr(test,busc));
     printf("\nla varible original es:%s",test);
 }
-*/

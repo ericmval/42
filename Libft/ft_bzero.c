@@ -18,12 +18,12 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	mid = (char *)s;
-	while (i < n -1)
+	while (i < n)
 	{
 		mid[i] = '\0';
 		i++;
 	}
-	s = (void *)mid;
+
 }
 /*
 int main (void)

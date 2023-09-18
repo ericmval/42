@@ -38,7 +38,7 @@ char *ft_strrchr(const char *s, int c)
     }
     return (NULL);
 }
-
+/*
 int main (void)
 {
     char test[12] = "tripouille";
@@ -48,3 +48,4 @@ int main (void)
     printf("la salida  de %s es :%s\n",test,ft_strrchr(test,busc));
     printf("\nla varible original es:%s",test);
 }
+*/

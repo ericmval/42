@@ -19,7 +19,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 
 	i = 1;
 	if (!str)
-		return (NULL),
+		return (NULL);
 	if (c > 256)
 		c = c % 256;
 	med = (char *) str;

@@ -13,55 +13,51 @@
 #include <stdio.h>
 #include <string.h>
 
-char compare (const char *big, const char *little, int b, int& comp);
+ int compare(const char *big, const char *little);
 
  char *ft_strnstr(const char *big,	const char *little, size_t len)
  {
     size_t i;
-//    int b;
-//s    int *comp;
-    char *salida;
-    comp = 0;
+    int s;
+    
     i = 0;
-    b = 0;
-    while (big++ && i++ <= len)
+    while (big && i <= len)
     {
-        compare(big, little, 0, 0);
+        if (*big ==  *little)
+        {
+            s = compare(big, little);
+            if (s)
+                return ((char *)big);
+        }
+        big++;
+        i++;
     }
     return(NULL);
  }
 
- char compare (const char *big, const char *little, int b, (int&) comp)
+ int compare(const char *big, const char *little)
  {
-    char *salida;
+    int comp;
 
-     if (*big == little[b])
+    comp = 1;
+    while (*little != '\0')
     {
-        salida = (char*)big;  
-        comp = 1;
-        while (little[b])
-        {
-            if (*big != little[b])
-            {
-                comp = 0;
-                break ;
-            }
-            big++;
-            b++;
-            }
-        big = big - b;
-        b= 0;
-        if (comp)
-            return (salida);
-        }
- }
-
+        if (*big == *little)
+            comp = 1;
+        else
+            return (0);
+        big++;
+        little++;
+    }
+    return (comp);
+}
+/*
 int main (void)
 {
     char test1[22] = "hola ladilla ladradora";
     char test2[5] = "ladr";
     size_t  cont = 23;
-    printf("la original retorna :%d\n",strnstr(test1,test2,cont));
+//    printf("la original retorna :%d\n",strnstr(test1,test2,cont));
     printf("la original retorna :%s\n",ft_strnstr(test1,test2,cont));
 }
-
+*/

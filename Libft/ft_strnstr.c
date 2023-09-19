@@ -51,13 +51,13 @@
     }
     return (comp);
 }
-/*
+
 int main (void)
 {
     char test1[22] = "hola ladilla ladradora";
-    char test2[5] = "ladr";
+    char test2[5] = "";
     size_t  cont = 23;
-//    printf("la original retorna :%d\n",strnstr(test1,test2,cont));
+    printf("la original retorna :%d\n",strnstr(test1,test2,cont));
     printf("la original retorna :%s\n",ft_strnstr(test1,test2,cont));
 }
-*/
+

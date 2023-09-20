@@ -57,10 +57,9 @@
 
 int main (void)
 {
-    char test1[22] = "hola ladilla ladradora";
-    char test2[4] = "lad";
-    size_t  cont = 8;
-/*    printf("la original retorna :%d\n",strnstrn(test1,test2,cont)); */
+    char test1[1] = "";
+    char test2[3] = "xx";
+    size_t  cont = 4294967295;
+//    printf("la original retorna :%d\n",strnstrn(test1,test2,cont)); 
     printf("la original retorna :%s\n",ft_strnstr(test1,test2,cont));
 }
-

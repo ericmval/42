@@ -9,7 +9,7 @@
 /*   Updated: 2023/09/20 23:15:26 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <string.h>
 #include <stddef.h>
 #include <stdio.h>
 
@@ -49,13 +49,17 @@ size_t count(const char* str)
 	}
 	return (i);
 }
-/*
+
 int main (void)
 {
 	char inicio[5] = "casa";
 	char final[5] = "pato";
 	ft_strlcpy(final,inicio,5);
 	printf("final es:%s\n",final);
+	char inicio2[5] = "casa";
+	char final2[5] = "pato";
+	strlcpy(final2,inicio2,5);
+	printf("final es:%s\n",final2);
 	return(0);
 }
-*/
+

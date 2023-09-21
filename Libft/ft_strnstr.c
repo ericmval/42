@@ -13,19 +13,20 @@
 #include <stdio.h>
 #include <string.h>
 
- int compare(const char *big, const char *little,size_t *i, size_t len);
+int compare(const char *big, const char *little, size_t *i, size_t len);
 
- char *ft_strnstr(const char *big,	const char *little, size_t len)
- {
+char *ft_strnstr(const char *big, const char *little, size_t len)
+{
     size_t i;
     int s;
-    
-    i = 1;
-    if (!little)
+
+    i = 0;
+    if (*little == '\0')
         return ((char *)big);
-    while (big && i <= len)
+
+    while (*big && i < len)
     {
-        if (*big ==  *little)
+        if (*big == *little)
         {
             s = compare(big, little, &i, len);
             if (s)
@@ -34,32 +35,33 @@
         big++;
         i++;
     }
-    return(NULL);
- }
+    return (NULL);
+}
 
- int compare(const char *big, const char *little,size_t  *i,size_t len)
- {
-    int comp;
 
-    comp = 1;
-    while (*little != '\0' && *i <= len)
+
+int compare(const char *big, const char *little, size_t *i, size_t len)
+{
+    size_t local_i = 0;
+    while (*little != '\0' && (*i + local_i) < len)
     {
-        if (*big == *little)
-            comp = 1;
-        else
+        if (*big != *little)
             return (0);
         big++;
         little++;
-        *i+= 1;
+        local_i++;
     }
-    return (comp);
+    if (*little != '\0')
+        return (0);
+    return (1);
 }
-
-int main (void)
+/*
+int main(void)
 {
     char test1[1] = "";
     char test2[3] = "xx";
-    size_t  cont = 4294967295;
-//    printf("la original retorna :%d\n",strnstrn(test1,test2,cont)); 
-    printf("la original retorna :%s\n",ft_strnstr(test1,test2,cont));
+    size_t cont = 4294967295;
+    // printf("la original retorna :%s\n", strnstr(test1, test2, cont));
+    printf("la original retorna :%s\n", ft_strnstr(test1, test2, cont));
 }
+*/

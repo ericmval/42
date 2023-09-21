@@ -1,9 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
-
     {
-    
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -13,7 +11,7 @@
       "cwd": "/Users/emartin2/0Work/Libft",
       "program": "/Users/emartin2/0Work/Libft/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gcc",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

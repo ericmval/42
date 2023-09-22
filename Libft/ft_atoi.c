@@ -6,23 +6,23 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 23:24:00 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/21 23:28:19 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/22 22:31:24 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-unsigned char *ft_position(const char *c,int *signo);
-int ft_atoi(const char *nptr);
-int	numerice( unsigned char *digi);
+unsigned char	*ft_position(const char *c, int *signo);
+int		ft_atoi(const char *nptr);
+int		numerice(unsigned char *digi);
 
-unsigned char *ft_position (const char *c,int *signo)
+unsigned char	*ft_position(const char *c, int *signo)
 {
-	while (*c !='\0')
+	while (*c != '\0')
 	{
-		if (*c == ' ' || *c == '\n' || *c == '\v' || *c == '-' ||
-			 *c == '\r' || *c == '\t' || *c == '\f' || *c == '+')
+		if (*c == ' ' || *c == '\n' || *c == '\v' || *c == '-'
+			|| *c == '\r' || *c == '\t' || *c == '\f' || *c == '+')
 		{
 			if (*signo != 0)
 				return (NULL);
@@ -33,20 +33,21 @@ unsigned char *ft_position (const char *c,int *signo)
 			c++;
 		}
 		else if (*c < '0' || *c > '9')
-			return (NULL) ;
-		else if (*c > '0' && *c < '9')
+			return (NULL);
+		else if (*c >= '0' && *c <= '9')
 			return ((unsigned char *) c);
 	}
 	return (NULL);
 }
-int ft_atoi(const char *nptr)
+
+int	ft_atoi(const char *nptr)
 {
-	int signo;
-	unsigned char *salida;
-	int numexit;
+	int		signo;
+	unsigned char	*salida;
+	int		numexit;
+
 	signo = 0;
 	salida = ft_position(nptr, &signo);
-	printf("la salida es %s\n y el signo %d\n",salida, signo);
 	if (salida)
 	{
 		numexit = numerice(salida);
@@ -55,8 +56,8 @@ int ft_atoi(const char *nptr)
 		return (numexit);
 	}
 	else
-		return (0);		
-	 }
+		return (0);
+}
 
 int	numerice( unsigned char *digi)
 {
@@ -69,7 +70,7 @@ int	numerice( unsigned char *digi)
 	mult = 1;
 	i = 0;
 	suma = 0;
-	while (digi[i] != '\0' && digi[i] > '0' && digi[i] < '9')
+	while (digi[i] != '\0' && digi[i] >= '0' && digi[i] <= '9')
 	{
 		i++;
 	}
@@ -82,13 +83,3 @@ int	numerice( unsigned char *digi)
 	}
 	return (suma);
 }
-/*
-int	main(void)
-{
-	char	entrada[] ="43-^859";
-	printf("el char es : %s \n", entrada);
-	printf("el entero es %d \n", ft_atoi(entrada));
-	return(0);
-}
-*/
-

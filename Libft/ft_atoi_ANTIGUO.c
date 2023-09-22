@@ -10,55 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+
 #include <stdio.h>
 
-unsigned char *ft_position(const char *c,int *signo);
-int ft_atoi(const char *nptr);
-int	numerice( unsigned char *digi);
+int	is_negative(char *str)
+{
+	int	negative;
+	int	i;
 
-unsigned char *ft_position (const char *c,int *signo)
-{
-	while (*c !='\0')
+	i = 0;
+	negative = 0;
+	while (str[i] != '\0' && (str[i] < '0' || str[i] > '9'))
 	{
-		if (*c == ' ' || *c == '\n' || *c == '\v' || *c == '-' ||
-			 *c == '\r' || *c == '\t' || *c == '\f' || *c == '+')
-		{
-			if (*signo != 0)
-				return (NULL);
-			if (*c == '+')
-				*signo = 1;
-			if (*c == '-')
-				*signo = -1;
-			c++;
-		}
-		else if (*c < '0' || *c > '9')
-			return (NULL) ;
-		else if (*c > '0' && *c < '9')
-			return ((unsigned char *) c);
+		if (str[i] == '-')
+			negative++;
+		i++;
 	}
-	return (NULL);
-}
-int ft_atoi(const char *nptr)
-{
-	int signo;
-	unsigned char *salida;
-	int numexit;
-	signo = 0;
-	salida = ft_position(nptr, &signo);
-	printf("la salida es %s\n y el signo %d\n",salida, signo);
-	if (salida)
-	{
-		numexit = numerice(salida);
-		if (signo < 0)
-			numexit *= -1;
-		return (numexit);
-	}
+	if (negative % 2 == 1)
+		return (1);
 	else
-		return (0);		
-	 }
+		return (0);
+}
 
-int	numerice( unsigned char *digi)
+int	numerice(char *digi)
 {
 	int	mult;
 	int	salida;
@@ -69,7 +43,7 @@ int	numerice( unsigned char *digi)
 	mult = 1;
 	i = 0;
 	suma = 0;
-	while (digi[i] != '\0' && digi[i] > '0' && digi[i] < '9')
+	while (digi[i] != '\0')
 	{
 		i++;
 	}
@@ -82,10 +56,70 @@ int	numerice( unsigned char *digi)
 	}
 	return (suma);
 }
+
+int	ft_position(char *str, int *s, int signo )
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '+' || str[i] == '-')
+		{
+			signo = 1;
+			i++;
+		}
+		else if (str[i] == ' ' || str[i] == '\n' || str[i] == '\v'
+			|| str[i] == '\r' || str[i] == '\t' || str[i] == '\f')
+		{
+			if (signo == 1)
+				return (1);
+			i++;
+		}
+		else if (str[i] < '0' || str[i] > '9')
+			return (1);
+		else if (str[i] >= '0' && str[i] <= '9')
+			break ;
+	}
+	*s = i;
+	return (0);
+}
+
+void	intechange(char *str, char *exit, int i)
+{
+	int	i2;
+
+	i2 = 0;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
+		exit[i2] = str[i];
+		i++;
+		i2++;
+	}
+	exit[i2] = '\0';
+}
+
+int	ft_atoi(char *str)
+{
+	char	str2[20];
+	int		salida;
+	int		i;
+
+	i = 0;
+	salida = 0;
+	ft_position(str, &i, 0);
+	intechange(str, str2, i);
+	salida = numerice(str2);
+	if (ft_position(str, &i, 0) == 1)
+		salida = 0;
+	if (is_negative(str))
+		salida = -salida;
+	return (salida);
+}
 /*
 int	main(void)
 {
-	char	entrada[] ="43-^859";
+	char	entrada[] ="--++43-^859";
 	printf("el char es : %s \n", entrada);
 	printf("el entero es %d \n", ft_atoi(entrada));
 	return(0);

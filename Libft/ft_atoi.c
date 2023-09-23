@@ -6,7 +6,7 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 23:24:00 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/22 22:31:24 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/23 09:32:22 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <stdio.h>
 
 unsigned char	*ft_position(const char *c, int *signo);
-int		ft_atoi(const char *nptr);
-int		numerice(unsigned char *digi);
+int				ft_atoi(const char *nptr);
+int				numerice(unsigned char *digi);
 
 unsigned char	*ft_position(const char *c, int *signo)
 {
@@ -42,9 +42,9 @@ unsigned char	*ft_position(const char *c, int *signo)
 
 int	ft_atoi(const char *nptr)
 {
-	int		signo;
+	int				signo;
 	unsigned char	*salida;
-	int		numexit;
+	int				numexit;
 
 	signo = 0;
 	salida = ft_position(nptr, &signo);

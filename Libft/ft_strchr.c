@@ -6,7 +6,7 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 21:34:26 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/17 13:52:32 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/23 10:18:34 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
@@ -19,9 +19,6 @@ char	*ft_strchr(const char *s, int c)
 
 	c = (char) c;
 	sal = (char *) s;
-/*	if (s[0] == '\0')
-		return (NULL);
-*/		
 	while (*sal != '\0')
 	{
 		if (*sal == c)

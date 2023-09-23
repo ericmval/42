@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 14:46:31 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/16 14:47:04 by emartin2         ###   ########.fr       */
+/*   Created: 2023/09/23 09:51:30 by emartin2          #+#    #+#             */
+/*   Updated: 2023/09/23 09:56:37 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,18 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 1;
-    while ((*s1 || *s2) &&  i <= n )
-    {
-        if ((unsigned char)*s1 != (unsigned char)*s2)
-            return ((unsigned char)*s1 - (unsigned char)*s2);
-        s1++;
-        s2++;
-        i++;
-    }
-    return (0);
-
+	i = 1;
+	while ((*s1 || *s2) && i <= n)
+	{
+		if ((unsigned char)*s1 != (unsigned char)*s2)
+			return ((unsigned char)*s1 - (unsigned char)*s2);
+		s1++;
+		s2++;
+		i++;
+	}
+	return (0);
 }
 
 /*

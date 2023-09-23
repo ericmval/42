@@ -6,11 +6,12 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 22:42:04 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/21 22:42:24 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/23 10:16:01 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 #include <string.h>
+
 size_t	contador(const char *a);
 
 size_t	contador(const char *a)
@@ -22,7 +23,8 @@ size_t	contador(const char *a)
 		cont++;
 	return (cont);
 }
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	ini;
 	size_t	ini2;

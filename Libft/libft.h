@@ -6,7 +6,7 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 23:40:25 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/23 10:29:21 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/23 15:12:41 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nmemb, size_t size);
 #endif

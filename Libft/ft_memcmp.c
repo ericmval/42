@@ -38,7 +38,7 @@ int main (void)
     char test2[7] = "patato";
     int cont = 6;
 
-    printf("la salida original es: %d\n",memcmp(test1,test2,cont));
-    printf("la salida  mia     es: %d\n",ft_memcmp(test1,test2,cont));
+    printf("la exit original es: %d\n",memcmp(test1,test2,cont));
+    printf("la exit  mia     es: %d\n",ft_memcmp(test1,test2,cont));
 }
 */

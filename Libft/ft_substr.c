@@ -1,43 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 21:34:26 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/23 10:18:34 by emartin2         ###   ########.fr       */
+/*   Created: 2023/09/24 12:01:30 by emartin2          #+#    #+#             */
+/*   Updated: 2023/09/24 16:05:38 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include <stdlib.h>
+#include "libft.h"
 #include <stdio.h>
-#include <string.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start,size_t len)
 {
+	size_t  count;
 	char	*exit;
+	int 	i;
 
-	c = (char) c;
-	exit = (char *) s;
-	while (*exit != '\0')
+	i = 0;
+	count = ft_strlen(s);
+	if (((size_t)start + len) >= count)
+		return ("");
+	s += start;
+	exit = (char *) malloc(len +1);
+	if (!exit)
+		return (NULL);
+	while (len-- )
 	{
-		if (*exit == c)
-			return (exit);
-		exit++;
+		exit[i] = s[i];
+		i++;
 	}
-	if (c == '\0')
-		return (exit);
-	return (NULL);
+	exit[i] = '\0';
+	return (exit);
 }
-/*
+
 int main (void)
 {
-    char test[8] = "pato";
-    int busc = '\0';
-
-    printf("la exit original de %s es :%s\n",test,strchr(test,busc));
-    printf("la exit  de %s es :%s\n",test,ft_strchr(test,busc));
-    printf("la varible original es:%s",test);
-
+	char test[11] = "";
+	char *test2;
+	test2 = (ft_substr(test,5,0));
+	printf("%s\n",test2);
+	return (0);
 }
-*/
+

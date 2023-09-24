@@ -13,23 +13,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-unsigned char	*ft_position(const char *c, int *signo);
-int				ft_atoi(const char *nptr);
-int				numerice(unsigned char *digi);
+static unsigned char	*ft_position(const char *c, int *sign);
+static int				numerice(unsigned char *digi);
 
-unsigned char	*ft_position(const char *c, int *signo)
+static unsigned char	*ft_position(const char *c, int *sign)
 {
 	while (*c != '\0')
 	{
 		if (*c == ' ' || *c == '\n' || *c == '\v' || *c == '-'
 			|| *c == '\r' || *c == '\t' || *c == '\f' || *c == '+')
 		{
-			if (*signo != 0)
+			if (*sign != 0)
 				return (NULL);
 			if (*c == '+')
-				*signo = 1;
+				*sign = 1;
 			if (*c == '-')
-				*signo = -1;
+				*sign = -1;
 			c++;
 		}
 		else if (*c < '0' || *c > '9')
@@ -42,16 +41,16 @@ unsigned char	*ft_position(const char *c, int *signo)
 
 int	ft_atoi(const char *nptr)
 {
-	int				signo;
-	unsigned char	*salida;
+	int				sign;
+	unsigned char	*exit;
 	int				numexit;
 
-	signo = 0;
-	salida = ft_position(nptr, &signo);
-	if (salida)
+	sign = 0;
+	exit = ft_position(nptr, &sign);
+	if (exit)
 	{
-		numexit = numerice(salida);
-		if (signo < 0)
+		numexit = numerice(exit);
+		if (sign < 0)
 			numexit *= -1;
 		return (numexit);
 	}
@@ -59,14 +58,14 @@ int	ft_atoi(const char *nptr)
 		return (0);
 }
 
-int	numerice( unsigned char *digi)
+static int	numerice( unsigned char *digi)
 {
 	int	mult;
-	int	salida;
+	int	exit;
 	int	i;
 	int	suma;
 
-	salida = 0;
+	exit = 0;
 	mult = 1;
 	i = 0;
 	suma = 0;
@@ -76,8 +75,8 @@ int	numerice( unsigned char *digi)
 	}
 	while (i > 0)
 	{
-		salida = digi[i - 1] - '0';
-		suma = suma + (salida * mult);
+		exit = digi[i - 1] - '0';
+		suma = suma + (exit * mult);
 		i--;
 		mult = mult * 10;
 	}

@@ -30,7 +30,7 @@ int main (void)
     char test1[20] = "patato";
     char test2[20] = "patata";
 
-    printf("salida original :%d \n",strcmp(test1,test2));
-    printf("salida     mia  :%d \n",ft_strcmp(test1,test2));
+    printf("exit original :%d \n",strcmp(test1,test2));
+    printf("exit     mia  :%d \n",ft_strcmp(test1,test2));
 }
 */

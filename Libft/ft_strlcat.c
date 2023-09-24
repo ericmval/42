@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	contador(const char *a);
+static size_t	counter(const char *a);
 
-size_t	contador(const char *a)
+static size_t	counter(const char *a)
 {
 	size_t	cont;
 
@@ -28,11 +28,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	ini;
 	size_t	ini2;
-	size_t	salida;
+	size_t	exit;
 
-	salida = contador(dst)+contador(src);
-	if (dstsize < contador(dst))
-		salida = contador(src) + dstsize;
+	exit = counter(dst)+counter(src);
+	if (dstsize < counter(dst))
+		exit = counter(src) + dstsize;
 	ini2 = 0;
 	ini = 0;
 	while (dst[ini] != '\0' )
@@ -46,7 +46,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		ini2++;
 	}
 	dst[ini] = '\0';
-	return (salida);
+	return (exit);
 }
 /*
 int main (void)
@@ -60,9 +60,9 @@ int main (void)
 	while (mio < 35)
 	{
 		printf ("numero es : %d \n",mio);
-		printf ("la salida mia es: %lu \n",ft_strlcat(test3,test1,mio));
+		printf ("la exit mia es: %lu \n",ft_strlcat(test3,test1,mio));
 		printf ("test 1 es : %s \ntest 2 es : %s \n",test1,test3);
-    	printf ("la salida origunal es: %lu \n",strlcat(test2,test4,mio));
+    	printf ("la exit origunal es: %lu \n",strlcat(test2,test4,mio));
     	printf ("test 1 es : %s \ntest 2 es : %s \n\n\n\n\n\n",test4,test2);
 		mio++;
 	}

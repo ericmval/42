@@ -44,8 +44,8 @@ int main (void)
     char test[12] = "tripouille";
     int busc = 't' + 256;
 
-    printf("la salida original de %s es :%s\n",test,strrchr(test,busc));
-    printf("la salida  de %s es :%s\n",test,ft_strrchr(test,busc));
+    printf("la exit original de %s es :%s\n",test,strrchr(test,busc));
+    printf("la exit  de %s es :%s\n",test,ft_strrchr(test,busc));
     printf("\nla varible original es:%s",test);
 }
 */

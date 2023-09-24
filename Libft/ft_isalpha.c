@@ -18,7 +18,7 @@ int	ft_isalpha(int c)
 /*
 int	main(void)
 {
-	printf(" salida = %d\n", ft_isalpha('r'));
+	printf(" exit = %d\n", ft_isalpha('r'));
 	return (0);
 }
 */

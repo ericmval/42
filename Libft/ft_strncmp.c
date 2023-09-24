@@ -37,7 +37,7 @@ int main (void)
     char test2[20] = "test\0";
     int comp = 6;
 
-    printf("salida original :%d \n",strncmp(test1,test2,comp));
-    printf("salida     mia  :%d \n",ft_strncmp(test1,test2,comp));
+    printf("exit original :%d \n",strncmp(test1,test2,comp));
+    printf("exit     mia  :%d \n",ft_strncmp(test1,test2,comp));
 }
 */

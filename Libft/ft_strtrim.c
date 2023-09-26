@@ -11,63 +11,28 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>		
 #include "libft.h"
 
-static void ft_pos(char const *s1, char const *set, size_t *f_i, size_t *r_i);
-static int ft_inside(char const s1, char const *set);
-
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t *f_i;
-	size_t *r_i;
+	int	start;
+	int	end;
+	char	*str;
 
 	if (!s1 || !set)
 		return (NULL);
-	ft_pos(s1, set, f_i,r_i );
-	return ("test");
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[start]) && start <= end)
+		start++;
+	if (start > end)
+		return (ft_strdup(s1 + end + 1));
+	while (ft_strchr(set, s1[end]) && end >= 0)
+		end--;
+	str = (char *) malloc(end - start + 2);
+	if (!str)
+	return (NULL);
+	ft_strlcpy(str, &s1[start], end - start + 2);
+	return (str);
 }
-static void ft_pos(char const *s1, char const *set, size_t *f_i, size_t *r_i)
-{
-	int	end_c;
-	size_t	len;
-	len = ft_strlen(s1);
-	end_c = 0;
-
-	while (*s1)
-	{
-		if (ft_inside(*s1 ,set) && !end_c)
-			f_i++;
-		else
-			end_c = 1;
-		s1++;
-	}
-	end_c = 0;
-	while (len > 0)
-	{
-		if (ft_inside(*s1 ,set) && !end_c)
-			r_i++;
-		else
-			end_c = 1;
-		s1--;
-		len--;
-	}
-}
-
-static int ft_inside(char const s1, char const *set)
-{
-	while (*set != '\0')
-	{
-		if ( s1 == *set)
-			return (1);
-		set++;
-	}
-	return (0);
-}
-
-int main (void)
-{
-	ft_strtrim("2332casa2334","1234");
-	return (0);
-}
-		
-

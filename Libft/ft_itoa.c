@@ -10,25 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
-static char *ft_reserve(int n, int *negative, int *count_n);
-static char *ft_putstr(char *exit, int negative, int n, int count_n);
+static char	*ft_reserve(int n, int *negative, int *count_n);
+static char	*ft_putstr(char *exit, int negative, int n, int count_n);
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int negative;
-	char *exit;
-	int count_n;
+	int		negative;
+	char	*exit;
+	int		count_n;
 
 	if (n == -2147483648)
 	{
-		exit = (char *) malloc(12);
-			if (!exit)
-				return (NULL);
-		ft_strlcpy(exit,"-2147483648",12);
+		exit = (char *)malloc(12);
+		if (!exit)
+			return (NULL);
+		ft_strlcpy(exit, "-2147483648", 12);
 		return (exit);
 	}
 	if (n == 0)
@@ -36,8 +36,8 @@ char *ft_itoa(int n)
 		exit = malloc(2);
 		if (!exit)
 			return (NULL);
-		ft_strlcpy(exit,"0",2);
-		return exit;
+		ft_strlcpy(exit, "0", 2);
+		return (exit);
 	}
 	exit = ft_reserve(n, &negative, &count_n);
 	if (!exit)
@@ -45,32 +45,29 @@ char *ft_itoa(int n)
 	return (ft_putstr(exit, negative, n, count_n));
 }
 
-static char *ft_putstr(char *exit, int negative, int n, int count_n)
+static char	*ft_putstr(char *exit, int negative, int n, int count_n)
 {
-	int i;
+	int	i;
 
 	i = 0;
-
 	if (negative)
 	{
 		exit[0] = '-';
 		n = -n;
 	}
-
 	while (count_n - i > 0)
 	{
-		exit[count_n -1 + negative - i] = (n % 10) + '0';
+		exit[count_n - 1 + negative - i] = (n % 10) + '0';
 		i++;
 		n /= 10;
 	}
-	
 	exit[count_n + negative] = '\0';
 	return (exit);
 }
 
-static char *ft_reserve(int n, int *negative, int *count_n)
+static char	*ft_reserve(int n, int *negative, int *count_n)
 {
-	char *exit;
+	char	*exit;
 
 	*count_n = 0;
 	*negative = 0;
@@ -84,15 +81,16 @@ static char *ft_reserve(int n, int *negative, int *count_n)
 		n /= 10;
 		(*count_n)++;
 	}
-	exit = (char *)malloc(*count_n + *negative + 1);  // +1 for '\0'
+	exit = (char *)malloc(*count_n + *negative + 1);
 	if (!exit)
 		return (NULL);
 	return (exit);
 }
 /*
-int main(void)
+int	main(void)
 {
-	char *test;
+	char	*test;
+
 	test = ft_itoa(-2147483648);
 	printf("%s\n", test);
 	free(test);

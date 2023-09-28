@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emartin2 <emartin2@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 00:28:09 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/28 10:37:01 by emartin2         ###   ########.fr       */
+/*   Created: 2023/09/28 21:32:24 by emartin2          #+#    #+#             */
+/*   Updated: 2023/09/28 21:36:55 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_putendl_fd(char *s, int fd)
 {
-	int		len;
-	char	*exit;
-	int		i;
+	size_t	len;
+	size_t	i;
+	char	n;
 
-	i = 0;
-	if (!s || !f)
-		return (NULL);
+	n = '\n';
+	i =0;
 	len = ft_strlen(s);
-	exit = (char *)malloc(len + 1);
-	if (!exit)
-		return (NULL);
 	while (i < len)
 	{
-		exit[i] = f(i, s[i]);
+		write (fd, &s[i], 1);
 		i++;
 	}
-	exit[len] = '\0';
-	return (exit);
+	write (fd, &n, 1);
 }

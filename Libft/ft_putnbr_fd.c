@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emartin2 <emartin2@student.42barcelona.co  +#+  +:+       +#+        */
+/*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/28 11:07:18 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/28 11:42:03 by emartin2         ###   ########.fr       */
+/*   Created: 2023/09/28 21:50:01 by emartin2          #+#    #+#             */
+/*   Updated: 2023/09/28 21:52:50 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
+	char	*num;
+	size_t	len;
+	size_t	i;
 
-	if (!s || !f)
-		return ;
 	i = 0;
-	while (s[i] != '\0')
+	num = ft_itoa(n);
+	len = ft_strlen(num);
+	while (i < len)
 	{
-		f(i, &s[i]);
+		write(fd, &num[i], 1);
 		i++;
 	}
 }
-/*
+
 int	main(void)
 {
-	char original[] = "HelloWorld";
-	printf("Original: %s\n", original);
-	striteri(original, to_upper_if_odd);
-	printf("Modified: %s\n", original);
+	ft_putnbr_fd( 0, 1);
 	return (0);
 }
-*/
+

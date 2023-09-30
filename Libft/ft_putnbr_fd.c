@@ -6,32 +6,43 @@
 /*   By: emartin2 <emartin2@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 21:50:01 by emartin2          #+#    #+#             */
-/*   Updated: 2023/09/28 21:52:50 by emartin2         ###   ########.fr       */
+/*   Updated: 2023/09/29 22:08:05 by emartin2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
+
+static void	ft_write(char a, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
-	size_t	len;
-	size_t	i;
+	int	i;
 
-	i = 0;
-	num = ft_itoa(n);
-	len = ft_strlen(num);
-	while (i < len)
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
 	{
-		write(fd, &num[i], 1);
-		i++;
+		if (n < 0)
+		{
+			ft_write('-', fd);
+			i = -n;
+		}
+		else
+		{
+			i = n;
+		}
+		if (i > 9)
+		{
+			ft_putnbr_fd(i / 10, fd);
+			i %= 10;
+		}
+		ft_write(i + '0', fd);
 	}
 }
 
-int	main(void)
+static void	ft_write(char a, int fd)
 {
-	ft_putnbr_fd( 0, 1);
-	return (0);
+	write(fd, &a, 1);
 }
-

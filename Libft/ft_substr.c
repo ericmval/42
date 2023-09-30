@@ -24,10 +24,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	count = ft_strlen(s);
-	if (start >= count)
+	if (start >= count  )
 		len = 0;
-	if (len > count)
-		len = count;
+	if (len >= count - start) 
+		len = count - start ;
 	exit = (char *) malloc(len + 1);
 	if (!exit)
 		return (NULL);
@@ -39,3 +39,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	exit[i] = '\0';
 	return (exit);
 }
+/*
+int main (void)
+{
+	ft_substr("hola",2,3);
+	return (0);
+}
+*/

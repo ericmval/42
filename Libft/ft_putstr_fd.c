@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	len;
 	size_t	i;
@@ -22,7 +22,7 @@ void ft_putstr_fd(char *s, int fd)
 	len = ft_strlen(s);
 	while (i < len)
 	{
-		write (fd, &s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

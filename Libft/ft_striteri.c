@@ -25,13 +25,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-/*
-int	main(void)
-{
-	char original[] = "HelloWorld";
-	printf("Original: %s\n", original);
-	striteri(original, to_upper_if_odd);
-	printf("Modified: %s\n", original);
-	return (0);
-}
-*/
+

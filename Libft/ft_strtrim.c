@@ -36,3 +36,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);
 }
+/*
+en:
+deletes the beginning and end of (s1) characters
+that match any of the characters in (set)
+until it finds one that is not in (set) then it stops.
+Returns a new string with the result.
+esp:
+borra del principio y del final de (s1) los caracteres
+que coincidan con cualquiera de los caracteres de (set)
+hasta que halla uno que no esté en (set) entonces para.
+Retorna una nueva cadena con el resultado.
+*/

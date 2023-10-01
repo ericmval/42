@@ -49,7 +49,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 This function does a prior verification to avoid
 overlapping memory spaces.
 (s < d && d < s + n) can be compared because they are addresses

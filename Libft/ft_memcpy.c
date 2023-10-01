@@ -43,7 +43,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 takes a pointer (src) and copies it to another (dest)
   as many spaces as it says (n). If (dest) and (src) are
   NULL and (n) has value returns NULL.

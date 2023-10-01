@@ -58,3 +58,17 @@ int main(void)
     return 0;
 }
 */
+/*
+en:
+It is used to safely copy a string. booking
+the last slot for /0.
+In string you have to put the size of the destination buffer.
+You can know the size by doing a siceoff or when it is declared
+the variable, if a smaller number is set there is a risk of overflow
+esp:
+se usa para copiar una cadena de manera segura. reserva
+el ultimo hueco para /0.
+en string hay que colocar el tamaño del bufer de destino.
+se puede saber el tamaño haciendo un siceoff o cuando se declara
+la variable, si se pone un numero menor existe riesdo de desbordamiento
+*/

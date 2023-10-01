@@ -65,7 +65,7 @@ int main()
 }
 */
 /*
-ing:
+en:
 receives a pointer to a char and creates a new char using
 an external function, calling the external function does not do
 The arguments need to be put, but they have to match the type of

@@ -30,7 +30,7 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, &n, 1);
 }
 /*
-eng:
+en:
 Send the character 'c' to the file descriptor
 specified.and a final line break
 esp:

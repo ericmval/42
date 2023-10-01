@@ -17,3 +17,6 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
+/*
+convert an lowercase letter to uppercase
+*/

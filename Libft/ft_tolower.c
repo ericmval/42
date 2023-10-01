@@ -17,3 +17,7 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+/*
+en:
+convert an uppercase letter to lowercase
+*/

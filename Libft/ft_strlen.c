@@ -33,3 +33,9 @@ int main(void){
 	return (0);
 }
 */
+/*
+en:
+measure the size of the chain that we pass
+esp:
+mide el tamaño de la cadena que le pasamos
+*/

@@ -40,7 +40,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 sets all bytes of a block of memory to /0.
 You have to be careful with putting more holes than you need.
 has the block.

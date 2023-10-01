@@ -49,3 +49,17 @@ int main (void)
     printf("\nla varible original es:%s",test);
 }
 */
+/*
+en:
+used to find the first occurrence of a specific character
+in a string. STARTING FROM BACK The function returns a pointer to the
+first matching character in the string, or NULL if the character is not matched
+found in the chain.
+  ft_strchr does the same from front to back
+esp:
+se utiliza para buscar la primera ocurrencia de un carácter específico 
+en una cadena.EMPEZANDO DESDE ATRAS La función devuelve un puntero al
+primer carácter que coincide en la cadena,o NULL si el carácter no se
+encuentra en la cadena. 
+ft_strchr hace lo mismo de adelante hacia atras
+*/

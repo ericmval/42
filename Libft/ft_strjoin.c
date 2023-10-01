@@ -54,7 +54,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 esp:
 concatenate two strings into a new string,
 allocating the memory necessary to store the

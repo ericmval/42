@@ -82,3 +82,9 @@ static int	numerice( unsigned char *digi)
 	}
 	return (suma);
 }
+/*
+en:
+converts a char string to an int variable
+esp:
+convierte una cadena char en una variable tipo int
+*/

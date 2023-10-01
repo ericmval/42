@@ -41,3 +41,13 @@ int main (void)
     printf("exit     mia  :%d \n",ft_strncmp(test1,test2,comp));
 }
 */
+/*
+en:
+compares a string of characters up to position (n) if it is different 
+it returns the subtraction between the 2 different characters and 
+if the string up to (n) is equal it returns 0
+esp:
+compara una cadena de carcteres hasta la posicion (n) si es diferente
+devuelve la resta entre los 2 caracteres diferentes y si la cadena
+hasta (n) es igual devuleve 0
+*/

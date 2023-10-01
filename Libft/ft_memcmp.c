@@ -43,7 +43,7 @@ int main (void)
 }
 */
 /*
-esp:
+en:
 compares 2 memory addresses, passes them to unsigned char
   if they are equal it returns 0 and if they are different it returns
    the difference between the 2 mismatched chars.

@@ -24,7 +24,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 Send the character 'c' to the file descriptor
 specified.
 esp:

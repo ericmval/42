@@ -48,7 +48,7 @@ int main()
 }
 */
 /*
-eng:
+en:
 receives a char and measures it using an external function,
 When calling the external function it is not necessary to put
 the arguments, but they have to match the type of

@@ -44,7 +44,7 @@ char	*ft_strdup(const char *s)
 }
 */
 /*
-eng:
+en:
 This function dynamically allocates memory for the new string
 using malloc and then copy the content of the original string
   in the new memory area. Finally, return a pointer

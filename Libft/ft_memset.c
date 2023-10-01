@@ -31,7 +31,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (mid);
 }
 /*
-eng:
+en:
 esp:
   fill the first (n) bytes of the pointed memory area
    by (s) with the constant byte value c.

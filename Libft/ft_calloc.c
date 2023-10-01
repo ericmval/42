@@ -52,7 +52,7 @@ int main() {
 }
 */
 /*
-eng:
+en:
 reserve memory space for a block
 nmemb: is the number of spaces you want to reserve
 size: it is the size that fits each hole, you can find out

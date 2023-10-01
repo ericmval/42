@@ -34,7 +34,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 Send the string 's' to the given file descriptor
 esp:
 envia el string (s) al descriptor dado

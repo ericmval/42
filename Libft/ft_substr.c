@@ -47,18 +47,18 @@ int main (void)
 }
 */
 /*
-eng:
-It is used to extract in a string from the pass (start) the
+en:
+It is used to extract in a string from the position (start) the
 maximum number of characters of (len), if it ends (s) or the entry
-is greater than the loss(s) to extract.
+is greater than the long of(s) to extract.
 if start is greater than the size of (s) it is given the value of 0 for
 When memory is reserved, 1 is saved as the original does and if
 len es is greater than the size of (s)minus the input position
 len becomes size of (s) minus start.
 esp:
-Se usa para extraer en un string  desde la pasicion (start) la 
+Se usa para extraer en un string  desde la posicion (start) la 
 cantidad de caracteres maxima de(len), si termina (s) o la entrada
-es mayor que el losgo de (s) para de extraer.
+es mayor que el largo de (s) termina de extraer.
 si start es mayor que el tamaño de (s) se le da el valor de 0 para 
 cuando se reserve memoria se guarde 1 como hace el original y si 
 len es es mayor que el tamaño de (s)menos la posicion de entrada

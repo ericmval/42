@@ -35,7 +35,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 compare 2 string if there is any difference subtract the character
 ascii of s1 -s2 in which you find the difference.
 esp:

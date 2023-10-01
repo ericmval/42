@@ -132,7 +132,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 Reserve (using malloc(3)) an array of strings
 resulting from separating the string 's' into substrings
 using the character 'c' as a delimiter. He

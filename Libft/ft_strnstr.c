@@ -64,3 +64,15 @@ int main(void)
     printf("la original retorna :%s\n", ft_strnstr(test1, test2, cont));
 }
 */
+/*
+en:
+searches a character string (big) for a substring (little)
+If it finds it, it returns the string from the place where
+found the first match. If you don't find a match
+returns NULL and if (little) is NULL returns the entire (big) string
+esp:
+busca en una cadena de carcteres (big) una subcadena (little)
+si la encuentra devuelve la cadena a partir del lugar donde 
+encontro la primera coincidencia. Si no encuentra coincidencia
+returna NULL y si (little) es NULL retorna la cadena (big) completa
+*/

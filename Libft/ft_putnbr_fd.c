@@ -47,7 +47,7 @@ static void	ft_write(char a, int fd)
 	write(fd, &a, 1);
 }
 /*
-eng:
+en:
 Send the number 'n' to the given file descriptor
 esp:
 Envía el número ’n’ al file descriptor dado

@@ -52,7 +52,7 @@ int main (void)
 }
 */
 /*
-eng:
+en:
 returns the memory address of the first match
 from str with c, if there are no matches it returns NULL
 esp:

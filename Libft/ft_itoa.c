@@ -94,7 +94,7 @@ int	main(void)
 }
 */
 /*
-eng:
+en:
 receives an integer and transforms to char
 esp:
 recibe un numero entero y lo transforma en char

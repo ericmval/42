@@ -23,3 +23,11 @@ int main (void)
 	return (0);
 }
 */
+/*
+eng:
+Send the character 'c' to the file descriptor
+specified.
+esp:
+Envía el carácter ’c’ al file descriptor
+especificado.
+*/

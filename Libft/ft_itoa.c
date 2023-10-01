@@ -93,3 +93,9 @@ int	main(void)
 	return (0);
 }
 */
+/*
+eng:
+receives an integer and transforms to char
+esp:
+recibe un numero entero y lo transforma en char
+*/

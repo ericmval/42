@@ -33,3 +33,9 @@ int main (void)
 	return (0);
 }
 */
+/*
+eng:
+Send the string 's' to the given file descriptor
+esp:
+envia el string (s) al descriptor dado
+*/

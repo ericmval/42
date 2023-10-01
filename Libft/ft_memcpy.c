@@ -42,3 +42,15 @@ int main (void)
     return (0);
 }
 */
+/*
+eng:
+takes a pointer (src) and copies it to another (dest)
+  as many spaces as it says (n). If (dest) and (src) are
+  NULL and (n) has value returns NULL.
+  has dangers of overflow and overlapping of information
+esp:
+toma un puntero (src)y copia en  en otro lo (dest)
+ tantos espacios como diga (n). Si (dest) y (src) son 
+ NULL y (n) tiene valor  retorna NULL.
+ tiene peligros de desbordamiento y de solapacion de informacion
+*/

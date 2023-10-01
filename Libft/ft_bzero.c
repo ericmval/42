@@ -39,3 +39,17 @@ int main (void)
 	return (0);
 }
 */
+/*
+eng:
+sets all bytes of a block of memory to /0.
+You have to be careful with putting more holes than you need.
+has the block.
+s: is a pointer to the memory block you want to zero.
+n: is the number of bytes you want to set to zero.
+esp;
+pone a /0 todos los bytes de un  bloque de memoria.
+hay que tener cuidado con poner mas huecos de los que
+tiene el bloque.
+s: es un puntero al bloque de memoria que quieres poner a cero.
+n: es el número de bytes que quieres poner a cero. 
+*/

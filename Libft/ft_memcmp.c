@@ -42,3 +42,13 @@ int main (void)
     printf("la exit  mia     es: %d\n",ft_memcmp(test1,test2,cont));
 }
 */
+/*
+esp:
+compares 2 memory addresses, passes them to unsigned char
+  if they are equal it returns 0 and if they are different it returns
+   the difference between the 2 mismatched chars.
+esp:
+compara 2 direcciones de memoria,los pasa a unsigned char
+ si son iguales returna 0 y si son diferentes retorna
+  la diferencia entre los 2 char que no coinciden.
+*/

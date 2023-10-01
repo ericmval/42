@@ -51,3 +51,17 @@ int main() {
     return 0;
 }
 */
+/*
+eng:
+reserve memory space for a block
+nmemb: is the number of spaces you want to reserve
+size: it is the size that fits each hole, you can find out
+       doing a sizeoff(variable type)
+It is important to do free() when we no longer need the space
+esp:
+reserva espacio de memoria para un blooque
+nmemb: es la cantidad de huecos que quieres reservar
+size : es el tamaño que cupa cada hueco, se puede averiguar
+      haciendo un sizeoff(tipo de variable)
+Es importante hacer free() cuando ya no necesitemos el espacio
+*/

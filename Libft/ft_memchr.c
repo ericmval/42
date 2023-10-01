@@ -51,3 +51,11 @@ int main (void)
 
 }
 */
+/*
+eng:
+returns the memory address of the first match
+from str with c, if there are no matches it returns NULL
+esp:
+devuelve la direccion de memoria de la primera coincidencia
+de str con  c,si no hay coincidencias returna NULL
+*/

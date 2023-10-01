@@ -22,3 +22,6 @@ int	main(void)
 	return (0);
 }
 */
+/*
+Return True if alfabetic
+*/

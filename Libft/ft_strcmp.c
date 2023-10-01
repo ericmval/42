@@ -34,3 +34,11 @@ int main (void)
     printf("exit     mia  :%d \n",ft_strcmp(test1,test2));
 }
 */
+/*
+eng:
+compare 2 string if there is any difference subtract the character
+ascii of s1 -s2 in which you find the difference.
+esp:
+compara 2 string si hay alguna diferencia resta el caracter
+ascii de s1 -s2 en el que encuentra la diferencia.
+*/

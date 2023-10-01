@@ -30,3 +30,18 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (mid);
 }
+/*
+eng:
+esp:
+  fill the first (n) bytes of the pointed memory area
+   by (s) with the constant byte value c.
+   the comparison of c >= 256 and later %256 is done for
+   that is compatible with signed char and therefore with ascii
+   extended
+esp:
+ llenar los primeros (n) bytes del área de memoria apuntada
+  por (s) con el valor de byte constante c.
+  la comparacion de c >= 256 y posterior %256 se hace para 
+  que sea compatible con insigned char y por tanto con ascii
+  extendido
+  */

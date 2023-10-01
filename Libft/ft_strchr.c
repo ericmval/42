@@ -41,3 +41,15 @@ int main (void)
 
 }
 */
+/*
+eng:
+used to find the first occurrence of a specific character
+  in a chain. The function returns a pointer to the first character that
+  matches in the string, or NULL if the character is not found
+  In the chain.
+esp:
+ se utiliza para buscar la primera ocurrencia de un carácter específico 
+ en una cadena. La función devuelve un puntero al primer carácter que 
+ coincide en la cadena, o NULL si el carácter no se encuentra 
+ en la cadena.
+*/

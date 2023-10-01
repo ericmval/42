@@ -53,3 +53,16 @@ int main (void)
 	return (0);
 }
 */
+/*
+eng:
+esp:
+concatenate two strings into a new string,
+allocating the memory necessary to store the
+  result.If you cannot reserve memory either of
+  the 2 entries in NULL return NULL
+esp:
+concatenar dos  cadenas en una nueva cadena, 
+asignando la memoria necesaria para almacenar el
+ resultado.Si no puede reservar memoria  cualquiera de 
+ las 2 entradas en NULL retorna NULL
+*/

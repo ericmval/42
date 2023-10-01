@@ -29,3 +29,11 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, &n, 1);
 }
+/*
+eng:
+Send the character 'c' to the file descriptor
+specified.and a final line break
+esp:
+Envía el carácter ’c’ al file descriptor
+especificado.y un salto de linea final
+*/

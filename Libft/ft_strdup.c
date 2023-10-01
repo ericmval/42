@@ -33,7 +33,6 @@ char	*ft_strdup(const char *s)
 	exit[count] = '\0';
 	return (exit);
 }
-
 /*int main (void)
 {
 	char test[7] = "";
@@ -42,4 +41,17 @@ char	*ft_strdup(const char *s)
 	test2 = ft_strdup(test);
 	printf("%s\n",test2);
 	return (0);
-}*/
+}
+*/
+/*
+eng:
+This function dynamically allocates memory for the new string
+using malloc and then copy the content of the original string
+  in the new memory area. Finally, return a pointer
+   to the new duplicate string.
+esp:
+Esta función asigna memoria dinámicamente para la nueva cadena 
+usando malloc y luego copia el contenido de la cadena original
+ en la nueva área de memoria. Finalmente, devuelve un puntero
+  a la nueva cadena duplicada.
+*/

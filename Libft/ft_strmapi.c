@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <stdlib.h>
+//char to_upper_odd(unsigned int index, char c);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -34,3 +35,45 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	exit[len] = '\0';
 	return (exit);
 }
+/*
+char to_upper_odd(unsigned int index, char c)
+{
+    if (index % 2 != 0 && c >= 'a' && c <= 'z')
+    {
+        return c - 'a' + 'A';
+    }
+    return c;
+}
+int main()
+{
+    char const *original = "hola mundo aaaaaaaaaaaaaaaaaaa";
+    char *modified;
+
+    modified = ft_strmapi(original, to_upper_odd);
+    if (modified)
+    {
+        printf("Original string: %s\n", original);
+        printf("Modified string: %s\n", modified);
+        free(modified);
+    }
+    else
+    {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+*/
+/*
+ing:
+receives a pointer to a char and creates a new char using
+an external function, calling the external function does not do
+The arguments need to be put, but they have to match the type of
+argument
+esp:
+recibe un puntero a un char y crea un nuevo char  usando 
+una funcion externa,al llamar a la funcion externa no hace
+falta poner los argumentos, pero tienen que coincidir en el tipo de
+argumento
+
+*/

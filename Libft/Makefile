@@ -34,9 +34,6 @@ clean:
 fclean:
 	rm -f ${NAME} ${OBJECTS}
 
-test:
-	gcc main.c -L. libft -o test
-
 re:
 	make fclean
 	make

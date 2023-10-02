@@ -28,8 +28,8 @@ size_t	ft_strlen(const char *s)
 /*
 int main(void){
 	
-	printf("%d\n",ft_strlen("paco"));
-	printf("%d\n",strlen("paco"));
+	printf("%zu\n",ft_strlen("paco"));
+	printf("%luß\n",strlen("paco"));
 	return (0);
 }
 */

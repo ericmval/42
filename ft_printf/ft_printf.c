@@ -13,7 +13,7 @@
 //#include <unistd.h>
 //#include <stdio.h>
 //#include <stdarg.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 //int ft_typesel (const char *text, int *i, va_list args,int *cont);
 //void ft_printer(int a, int *cont);
@@ -58,6 +58,10 @@ int ft_typesel (const char *text, size_t *i, va_list args,int *cont)
 		ft_printer(va_arg(args, int), cont);
 	else if (text[*i] == 's')
 		ft_print_string(va_arg(args,char *),cont);
+	else if (text[*i] == 'd' || text[*i] == 'i' )
+		ft_putnbr(va_arg(args, int ), cont);
+//	else if(text[*i] == 'p')
+		
 	else
 		return (-1);
 	(*i)++;

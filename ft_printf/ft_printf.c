@@ -10,18 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdarg.h>
+//#include <unistd.h>
+//#include <stdio.h>
+//#include <stdarg.h>
+#include "libftprintf.h"
 
-int ft_typesel (const char *text, int *i, va_list args,int *cont);
-static void ft_printer(char a, int *cont);
+//int ft_typesel (const char *text, int *i, va_list args,int *cont);
+//void ft_printer(int a, int *cont);
 
 int ft_printf(const char *text, ...)
 {
 	va_list	args;
 	int	cont;
-	int i;
+	size_t i;
 
 	i = 0;
 	va_start(args, text);
@@ -43,36 +44,38 @@ int ft_printf(const char *text, ...)
 	return(cont);
 }
 
-static void ft_printer(char a,int *cont)
+void ft_printer(int a,int *cont)
 {
 	write(1, &a, 1);
 	(*cont)++;
 }
 
-int ft_typesel (const char *text, int *i, va_list args,int *cont)
+int ft_typesel (const char *text, size_t *i, va_list args,int *cont)
 {
 	if (text[*i] == '%')
 		ft_printer(text[*i], cont);
 	else if (text[*i] == 'c')
-		ft_printer((char)va_arg(args, int), cont);
+		ft_printer(va_arg(args, int), cont);
+	else if (text[*i] == 's')
+		ft_print_string(va_arg(args,char *),cont);
 	else
 		return (-1);
 	(*i)++;
 	return (0);
 }
-
+/*
 int main (void)
 {
 	int original;
 	int ft;
 	char test1 = 'T';
 
-	ft = ft_printf("%c %%% bien \n", test1);
-	original = printf("%c %%% bien \n", test1);
+	ft = ft_printf("%c %% bienes \n", test1);
+	original = printf("%c %% bienes \n", test1);
 	printf("el original es:%d\n", original);
 	printf("el ft es:%d\n", ft);
 
 	return (0);
 }
-
+*/
 

@@ -12,7 +12,7 @@
 
 NAME =	libftprintf.a
 CFLAGS =	-Wall -Wextra -Werror
-SOURCES = ft_printf.c ft_util1.c ft_printers1.c
+SOURCES = ft_printf.c ft_util1.c ft_printers1.c ft_printers2.c
 
 HEADER = libftprintf.h
 

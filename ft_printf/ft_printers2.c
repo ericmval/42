@@ -28,7 +28,7 @@ static void	print_hex_digit_low(int digit, int *cont)
 		ft_printer(digit + 87, cont);
 }
 
-void	ft_print_hex_up(size_t num, int *cont, int first)
+void	ft_print_hex_up(unsigned int num, int *cont, int first)
 {
 	if (first && num == 0)
 		ft_printer('0', cont);
@@ -38,7 +38,7 @@ void	ft_print_hex_up(size_t num, int *cont, int first)
 	print_hex_digit_up(num % 16, cont);
 }
 
-void	ft_print_hex_low(size_t num, int *cont, int first)
+void	ft_print_hex_low(unsigned int num, int *cont, int first)
 {
 	if (first && num == 0)
 		ft_printer('0', cont);
@@ -47,12 +47,27 @@ void	ft_print_hex_low(size_t num, int *cont, int first)
 	ft_print_hex_low(num / 16, cont, 0);
 	print_hex_digit_low(num % 16, cont);
 }
-
-void	ft_print_ptr(size_t num, int *cont)
+/*
+void	ft_print_ptr(long long int num, int *cont)
 {
 	ft_printer('0', cont);
 	ft_printer('x', cont);
 //	if (!num)
 //		ft_printer('0',cont);
 	ft_print_hex_low(num, cont, 1);
+}
+*/
+void	ft_print_ptr(unsigned long int num, int *cont, int first)
+{
+	if (first)
+	{
+		ft_printer('0', cont);
+		ft_printer('x', cont);
+		if (num == 0)
+			ft_printer('0', cont);
+	}
+	if (num == 0)
+		return ;
+	ft_print_ptr(num / 16, cont, 0);
+	print_hex_digit_low(num % 16, cont);
 }

@@ -14,14 +14,15 @@
 
 int	main(void)
 {
+	char	test[3] = "yo";
 	int		original;
 	int		ft;
-//	char	test2;
+	char	*test2 = test;
 
-//	test2 = 'b';
-	ft =  ft_printf("%x\n", 0);
-	original =  printf("%x\n", 0);
-	printf("el original es:%d\n", original);
+
+	ft =  ft_printf("soy %p\n",test2);
+	original =  printf("soy %p\n",test2);
+	printf("el original es:%d\n",original);
 	printf("el ft es:%d\n", ft);
 	return (0);
 }

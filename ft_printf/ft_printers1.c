@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void ft_print_NULL(int *cont)
+void	ft_printNULL(int *cont)
 {
 	write(1, "(null)", 6);
 	*cont += 6;
@@ -24,7 +24,7 @@ void	ft_print_string(char *src, int *cont)
 
 	if (!src)
 	{
-		ft_print_NULL(cont);
+		ft_printNULL(cont);
 		return ;
 	}
 	i = 0;
@@ -33,7 +33,6 @@ void	ft_print_string(char *src, int *cont)
 		ft_printer(src[i], cont);
 		i++;
 	}
-	
 }
 
 void	ft_putnbr(int n, int *cont)

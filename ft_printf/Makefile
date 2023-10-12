@@ -39,6 +39,7 @@ re:
 
 test:
 	make clean
+	make
 	gcc main.c -L. -lftprintf -o test
 	./test
 

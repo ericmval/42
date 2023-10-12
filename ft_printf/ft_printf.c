@@ -47,7 +47,14 @@ int	ft_printf(const char *text, ...)
 
 void	ft_printer(int a, int *cont)
 {
-	write(1, &a, 1);
+	int error;
+
+	error = write(1, &a, 1);
+	if (error == -1 )
+	{
+		*cont = error;
+		return *cont ;
+	}
 	(*cont)++;
 }
 
@@ -62,13 +69,14 @@ int	ft_typesel(const char *text, size_t *i, va_list args, int *cont)
 	else if (text[*i] == 'd' || text[*i] == 'i')
 		ft_putnbr(va_arg(args, int), cont);
 	else if (text[*i] == 'u')
-		ft_unsigned_putnbr(va_arg(args, unsigned int), cont);
+		ft_unsigned_putnbr(va_arg(args, unsigned long int), cont);
 	else if (text[*i] == 'p')
-		ft_print_ptr((size_t)va_arg(args, void *), cont);
+		ft_print_ptr((unsigned long int)va_arg(args, void *), cont, 1);
+	//ft_print_ptr(va_arg(args, unsigned int), cont);
 	else if (text[*i] == 'x')
-		ft_print_hex_low(va_arg(args, size_t), cont, 1);
+		ft_print_hex_low(va_arg(args,unsigned int), cont, 1);
 	else if (text[*i] == 'X')
-		ft_print_hex_up(va_arg(args, size_t), cont, 1);
+		ft_print_hex_up(va_arg(args, unsigned int), cont, 1);
 	else
 		return (-1);
 	(*i)++;

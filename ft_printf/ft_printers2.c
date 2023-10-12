@@ -12,40 +12,77 @@
 
 #include "ft_printf.h"
 
-static void	print_hex_digit_up(int digit, int *cont)
+static int	print_hex_digit_up(int digit, int *cont)
 {
+	int out;
+
 	if (digit < 10)
-		ft_printer(digit + '0', cont);
+		out = ft_printer(digit + '0', cont);
+		
 	else
-		ft_printer(digit + 55, cont);
+		out = ft_printer(digit + 55, cont);
+	return (out);
+	
 }
 
-static void	print_hex_digit_low(int digit, int *cont)
+static int	print_hex_digit_low(int digit, int *cont)
 {
+	int out ;
+
 	if (digit < 10)
-		ft_printer(digit + '0', cont);
+	{
+		out = ft_printer(digit + '0', cont);
+		if (out == -1)
+			return (out);
+	}
 	else
-		ft_printer(digit + 87, cont);
+	{
+		out = ft_printer(digit + 87, cont);
+		if (out == -1)
+			return (out);
+	}
+	return (out);
 }
 
-void	ft_print_hex_up(unsigned int num, int *cont, int first)
+int	ft_print_hex_up(unsigned int num, int *cont, int first)
 {
+	int out;
+
+	out = 0;
 	if (first && num == 0)
 		ft_printer('0', cont);
+		if (out == -1)
+			return (out);
 	if (num == 0)
-		return ;
-	ft_print_hex_up(num / 16, cont, 0);
-	print_hex_digit_up(num % 16, cont);
+		return (out);
+	out = ft_print_hex_up(num / 16, cont, 0);
+	if (out == -1)
+			return (out);
+	out = print_hex_digit_up(num % 16, cont);
+	if (out == -1)
+			return (out);
+	return (out);
 }
 
-void	ft_print_hex_low(unsigned int num, int *cont, int first)
+int	ft_print_hex_low(unsigned int num, int *cont, int first)
 {
+	int out;
+
+	out = 0;
 	if (first && num == 0)
 		ft_printer('0', cont);
+		if (out == -1)
+			return (out);
 	if (num == 0)
-		return ;
-	ft_print_hex_low(num / 16, cont, 0);
-	print_hex_digit_low(num % 16, cont);
+		return (out);
+	out = ft_print_hex_low(num / 16, cont, 0);
+	if (out == -1)
+			return (out);
+	out = print_hex_digit_low(num % 16, cont);
+	if (out == -1)
+			return (out);
+	return (out);
+
 }
 /*
 void	ft_print_ptr(long long int num, int *cont)
@@ -57,17 +94,28 @@ void	ft_print_ptr(long long int num, int *cont)
 	ft_print_hex_low(num, cont, 1);
 }
 */
-void	ft_print_ptr(unsigned long int num, int *cont, int first)
+int	ft_print_ptr(unsigned long int num, int *cont, int first)
 {
+	int out;
 	if (first)
 	{
-		ft_printer('0', cont);
-		ft_printer('x', cont);
+		out = ft_printer('0', cont);
+		if (out == -1)
+			return (out);
+		out = ft_printer('x', cont);
+		if (out == -1)
+			return (out);
+
 		if (num == 0)
-			ft_printer('0', cont);
+			out = ft_printer('0', cont);
+			if (out == -1)
+				return (out);
 	}
 	if (num == 0)
-		return ;
-	ft_print_ptr(num / 16, cont, 0);
-	print_hex_digit_low(num % 16, cont);
+		return (out);
+	out = ft_print_ptr(num / 16, cont, 0);
+	if (out == -1)
+		return (out);
+	out = print_hex_digit_low(num % 16, cont);
+	return (out);
 }

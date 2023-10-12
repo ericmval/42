@@ -19,15 +19,15 @@
 # include <unistd.h>
 
 int		ft_typesel(const char *text, size_t *i, va_list args, int *cont);
-void	ft_printer(int a, int *cont);
+int	ft_printer(char a, int *cont);
 int		ft_printf(const char *text, ...);
 size_t	ft_strlen(const char *s);
-void	ft_print_string(char *src, int *cont);
-void	ft_putnbr(int n, int *cont);
-void	ft_print_ptr(unsigned long int num, int *cont, int first);
-void	ft_print_hex_low(unsigned int num, int *cont, int first);
-void	ft_print_hex_up(unsigned int num, int *cont, int first);
-void	ft_unsigned_putnbr(unsigned int n, int *cont);
-void	ft_printNULL(int *cont);
+int     ft_print_string(char *src, int *cont);
+int 	ft_putnbr(int n, int *cont);
+int	ft_print_ptr(unsigned long int num, int *cont, int first);
+int 	ft_print_hex_low(unsigned int num, int *cont, int first);
+int	ft_print_hex_up(unsigned int num, int *cont, int first);
+int	ft_unsigned_putnbr(unsigned int n, int *cont);
+//int     ft_printNULL(int *cont);
 
 #endif

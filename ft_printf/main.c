@@ -14,15 +14,13 @@
 
 int	main(void)
 {
-	char	test[3] = "yo";
+	char *str = NULL;
 	int		original;
 	int		ft;
-	char	*test2 = test;
-
-
-	ft =  ft_printf("soy %p\n",test2);
-	original =  printf("soy %p\n",test2);
-	printf("el original es:%d\n",original);
-	printf("el ft es:%d\n", ft);
+	ft =  ft_printf("bDVA)%pP#%%5z9\f%x]W\r%%%%ve%sJV3\nm(s^k}%u?E\tfd=0m\v %sKj&;\r ", (void *)8872523668784669870, -660084377, "aY@KKzXoyf\\i\tcs4/+;y]8CRu\n@u:L;\t5%z*@Y{\"~P) s2UyC>Nri]jQ'd07nn3*bo!Uk:H*,B~\t;fg$.VP&O5*\f;$x3", 1107453095, "\fn7xeKkvyKnxHFnMWz2r3\"}O@>4aK]NoJ@<2Njt{\rl1>7P8lG\f\f(/%c\nk.Zry=U\f@w^cOW-u~k((y:[\v{f+z8FD");
+	printf("\nel ft es:%d\n", ft);
+	original =  printf("bDVA)%pP#%%5z9\f%x]W\r%%%%ve%sJV3\nm(s^k}%u?E\tfd=0m\v %sKj&;\r ", (void *)8872523668784669870, -660084377, "aY@KKzXoyf\\i\tcs4/+;y]8CRu\n@u:L;\t5%z*@Y{\"~P) s2UyC>Nri]jQ'd07nn3*bo!Uk:H*,B~\t;fg$.VP&O5*\f;$x3", 1107453095, "\fn7xeKkvyKnxHFnMWz2r3\"}O@>4aK]NoJ@<2Njt{\rl1>7P8lG\f\f(/%c\nk.Zry=U\f@w^cOW-u~k((y:[\v{f+z8FD");
+	printf("\nel original es:%d\n",original);
+	
 	return (0);
 }

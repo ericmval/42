@@ -50,7 +50,7 @@ int	ft_print_hex_up(unsigned int num, int *cont, int first)
 
 	out = 0;
 	if (first && num == 0)
-		ft_printer('0', cont);
+		out = ft_printer('0', cont);
 		if (out == -1)
 			return (out);
 	if (num == 0)
@@ -70,7 +70,7 @@ int	ft_print_hex_low(unsigned int num, int *cont, int first)
 
 	out = 0;
 	if (first && num == 0)
-		ft_printer('0', cont);
+		out = ft_printer('0', cont);
 		if (out == -1)
 			return (out);
 	if (num == 0)

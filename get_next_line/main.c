@@ -15,13 +15,11 @@
 #include <stdio.h>
 #include "get_next_line.h"
 
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 10
-#endif
+
 //read(fd, buffer, BUFFER_SIZE)
 int main (void)
 {
-    int veces = 1;
+    int veces = 10;
     int i = 0;
     int fd = open ("test.txt", O_RDONLY);
     if(fd == -1)
@@ -29,15 +27,15 @@ int main (void)
         printf ("error al abrir archivo");
         return (-1);
     }
-    printf("el fd es %d",fd);  
+    printf("el fd es %d\n",fd);  
       
-/*
-    while (i++ <=veces || get_next_line(fd) )
+
+    while (i++ <=veces && get_next_line(fd) )
     {
-        printf ("%c",get_next_line(fd));
+        printf ("%s",get_next_line(fd));
         i++;
     }
-*/    
+    
     close (fd);
     return (0);
     

@@ -10,11 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	libftprintf.a
+NAME =	libget_next_line.a
 CFLAGS =	-Wall -Wextra -Werror
-SOURCES = ft_printf.c ft_util1.c ft_printers1.c ft_printers2.c
+SOURCES = get_next_line_utils.c get_next_line.c
 
-HEADER = libftprintf.h
+HEADER = get_next_line.h
 
 OBJECTS =	${SOURCES:.c=.o}
 
@@ -39,12 +39,12 @@ re:
 
 test:
 	make clean
-	gcc main.c -L. -lftprintf -o test
+	gcc main.c -L. libget_next_line.a -o test
 	./test
 
 debug:
 	
-	gcc main.c  ${CFLAGS} -L -lftprintf ${SOURCES} -g -o test
+	gcc main.c  ${CFLAGS} -L ${NAME} ${SOURCES} -g -o test
 	lldb ./test
 
 

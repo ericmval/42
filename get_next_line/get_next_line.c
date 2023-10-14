@@ -12,16 +12,17 @@
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-    static char     *buffer;
-    char            *exit_str;
-    int             last;
+	static char	*buffer;
+//	char		*exit_str;
+	int			last;
+	ssize_t			copied;
 
-    last = 0;
-    if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0 || last )
+	last = 0;
+	if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0 || last)
 		return (NULL);
-
-
+	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	copied = read(fd, buffer, BUFFER_SIZE);
+  return ((char *)buffer);
 }
-

@@ -1,0 +1,26 @@
+hola esto
+es un texto de prueba para ver si funciona el get nex line
+no se que mas poner pero a partir
+de 
+la
+siguente
+linea voy a hacer putaditas
+	un tab
+
+
+
+
+4 saltos de linea
+y ahora voy a poner caracteres raros como  un salto de line \nseguido de \002 y no se que mas
+por ultimo quiero mandar un saludo a quien corrija esto
+ADIOS
+
+ahh y termino con saltos de linea por joder
+
+
+
+
+
+
+
+

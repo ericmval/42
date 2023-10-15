@@ -19,7 +19,7 @@
 //read(fd, buffer, BUFFER_SIZE)
 int main (void)
 {
-    int veces = 10;
+    int veces = 1;
     int i = 0;
     int fd = open ("test.txt", O_RDONLY);
     if(fd == -1)

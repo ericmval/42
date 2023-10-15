@@ -38,7 +38,7 @@ re:
 	make
 
 test:
-	make clean
+	make re
 	gcc main.c -L. libget_next_line.a -o test
 	./test
 

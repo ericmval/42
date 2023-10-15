@@ -14,15 +14,22 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer;
-//	char		*exit_str;
+	char		inchar[BUFFER_SIZE+1];
+	char		*exit_str = "test\n";
 	int			last;
 	ssize_t			copied;
 
 	last = 0;
 	if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0 || last)
 		return (NULL);
-	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	copied = read(fd, buffer, BUFFER_SIZE);
-  return ((char *)buffer);
+	while ( (copied = read(fd, inchar, BUFFER_SIZE)) == BUFFER_SIZE &&
+			ft_strchr(inchar, 10) )
+	{
+		if (copied == -1)
+			return (NULL);
+		exit_str = 
+		if (ft_strchr())
+		printf("%s  %zd  ",inchar, copied);
+	}
+	return (exit_str);
 }

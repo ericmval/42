@@ -124,3 +124,79 @@ en string hay que colocar el tamaño del bufer de destino.
 se puede saber el tamaño haciendo un siceoff o cuando se declara
 la variable, si se pone un numero menor existe riesdo de desbordamiento
 */
+
+char	*ft_strdup(const char *s)
+{
+	size_t	i;
+	size_t	count;
+	char	*exit;
+
+	i = 0;
+	count = 0;
+	while (s[i] != '\0')
+		i++;
+	exit = (char *)malloc(i + 1);
+	if (!exit)
+		return (NULL);
+	while (count < i)
+	{
+		exit[count] = s[count];
+		count++;
+	}
+	exit[count] = '\0';
+	return (exit);
+}
+/*
+en:
+This function dynamically allocates memory for the new string
+using malloc and then copy the content of the original string
+  in the new memory area. Finally, return a pointer
+   to the new duplicate string.
+esp:
+Esta función asigna memoria dinámicamente para la nueva cadena 
+usando malloc y luego copia el contenido de la cadena original
+ en la nueva área de memoria. Finalmente, devuelve un puntero
+  a la nueva cadena duplicada.
+*/
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+	char	*mid;
+
+	i = 0;
+	mid = (char *)s;
+	while (i < n)
+	{
+		mid[i] = '\0';
+		i++;
+	}
+}
+/*
+int main (void)
+{
+	char test[19] = "canalla";
+	int i = 0;
+	ft_bzero(test,5);
+	while (i < 15)
+	{
+		printf("%c\n",test[i]);
+		printf("%p\n", test);
+		i++;
+	}
+	return (0);
+}
+*/
+/*
+en:
+sets all bytes of a block of memory to /0.
+You have to be careful with putting more holes than you need.
+has the block.
+s: is a pointer to the memory block you want to zero.
+n: is the number of bytes you want to set to zero.
+esp;
+pone a /0 todos los bytes de un  bloque de memoria.
+hay que tener cuidado con poner mas huecos de los que
+tiene el bloque.
+s: es un puntero al bloque de memoria que quieres poner a cero.
+n: es el número de bytes que quieres poner a cero. 
+*/

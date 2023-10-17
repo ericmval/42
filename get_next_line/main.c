@@ -19,7 +19,8 @@
 //read(fd, buffer, BUFFER_SIZE)
 int main (void)
 {
-    int veces = 1;
+ //   char *salida;
+    int veces = 6;
     int i = 0;
     int fd = open ("test.txt", O_RDONLY);
     if(fd == -1)
@@ -29,13 +30,11 @@ int main (void)
     }
     printf("el fd es %d\n",fd);  
       
-
-    while (i++ <=veces && get_next_line(fd) )
+    while (i < veces)
     {
-        printf ("%s",get_next_line(fd));
+        printf ("%s",get_next_line(fd)); 
         i++;
     }
-    
     close (fd);
     return (0);
     

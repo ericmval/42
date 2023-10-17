@@ -40,6 +40,7 @@ re:
 test:
 	make re
 	gcc main.c -L. libget_next_line.a -o test
+	clear
 	./test
 
 debug:

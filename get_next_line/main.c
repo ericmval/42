@@ -20,7 +20,7 @@
 int main (void)
 {
  //   char *salida;
-    int veces = 6;
+    int veces = 42;
     int i = 0;
     int fd = open ("test.txt", O_RDONLY);
     if(fd == -1)

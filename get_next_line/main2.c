@@ -1,8 +1,9 @@
 #include "get_next_line.h"
 
+//char *ft_sep(const char *pre,char (*post)[300])
 char *ft_sep(const char *pre,char (*post)[300])
 {
-	size_t i;
+	ssize_t i;
 	char *out;
     char *originalout;
 
@@ -13,22 +14,22 @@ char *ft_sep(const char *pre,char (*post)[300])
 	if(!out)
 		return (NULL);
     originalout = out;
-	while ( i-- + 1 > 0)
+	while ( i-- +1 > 0)
 	{
 		*out = *pre;
 		out++;
 		pre++;
 	}
 	i = 0;
+	ft_bzero((*post), 300);
 	while (*pre)
 	{
 		(*post)[i] = *pre;
 		i++;
 		pre++;
 	}
-	(*post)[i] = '\0';
 	return (originalout);
-}
+}	
 
 int main ()
 {
